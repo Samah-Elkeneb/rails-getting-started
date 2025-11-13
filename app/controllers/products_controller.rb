@@ -24,7 +24,7 @@ class ProductsController < ApplicationController
 
   def edit
   end
-  
+
   def update
     if @product.update(product_params)
       redirect_to @product
@@ -43,6 +43,6 @@ class ProductsController < ApplicationController
       @product = Product.find(params[:id])
     end
     def product_params
-      params.expect(product: [ :name, :description, :featured_image, :inventory_count])
+      params.expect(product: [ :name, :description, :featured_image, :inventory_count ])
     end
 end
